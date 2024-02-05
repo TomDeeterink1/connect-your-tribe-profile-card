@@ -1,0 +1,27 @@
+.card{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    height: fit-content;
+    background-color: var(--primary-low);
+    border-radius: var(--radius-medium);
+    padding: var(--large);
+    gap: var(--extra-small);
+    & h1{
+      color: var(--secondary);
+      margin-top: var(--extra-small);
+      margin-bottom: var(--none);
+      font-size: 56px;
+    }
+    & h2 {
+      color: var(--accent);
+      margin-top: var(--extra-small);
+      margin-bottom: var(--none);
+      font-size: 48px;
+    }
+    & p{
+      color: var(--main);
+    }
+  }

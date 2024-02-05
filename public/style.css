@@ -1,52 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+:root{
+  /* Colors */
+  --main: #fff;
+  --primary: #07072b;
+      --primary-low: #04041a;
+  --secondary: #DB59DE;
+      --secondary-low: #c750c9;
+  --alternative: #41BBE0;
+      --alternative-low: #3daed0;
+  --accent: #E0A600;
+      --accent-low: #d69d00;
+  --grey-one: #ebeaea;
+  --grey-two: #d6d4d4;
+  --grey-three: #c8c8c8;
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  /* Spacing */
+  --none: 0px;
+  --extra-small:  4px;
+  --small: 8px;
+  --medium: 16px;
+  --large: 32px;
+  --extra-large: 64px;
+  --extra-extra-large: 128px;
+
+  /* Borders */
+  --button: 4px;
+  --radius-small: 4px;
+  --radius-medium: 8px;
+  --radius-large: 12px;
+  --radius-extra-large: 16px;
 }
 
-body {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  font-family: Helvetica, Arial, sans-serif;
-  background: silver;
-}
+/* link styling */
+.link{
+  padding: 0.5em 2em;
+  background-color: var(--main);
+  color: var(--midnight);
+  border-radius: var(--button);
+  font-family: Arial, Helvetica, sans-serif ;
+  font-weight: 500;
+  font-size: 1em;
+  transition: ease-out 0.1s;
 
-header {
-  padding: 0.5rem;
-  background: red;
+  &:hover{
+      cursor: pointer;
+      background-color: var(--accent);
+      transition: ease-in 0.1s;
+  }
+  &:active{
+      transition: ease-in 0.1s;
+      transform: scale(90%) translateY(-2px)  translateX(2px);
+  }
+}
+.primary{
+  background-color: var(--secondary);
   color: white;
-
-  h1 {
-    text-transform: uppercase;
-  }
+}
+.secondary{
+  background-color: var(--accent);
+  color: white;
 }
 
-article {
+a{
+  text-decoration: none;
+}
+
+body{
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+.menu{
+  top: 50%;
+  margin: 0 auto;
+  width: 400px;
+  background-color: var(--primary-low);
+  padding: var(--large);
   display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  width: 12rem;
-  aspect-ratio: 1/1;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background: white;
-  text-align: center;
-  transform-origin: center;
-  transform: rotate(2deg);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  > p {
-    font-size: 2rem;
-    font-family: 'Permanent Marker', cursive;
-    transform-origin: center;
-    transform: rotate(-6deg);
-    word-break: break-all;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--medium);
+  & h1{
+    color: var(--main);
   }
-}
-
-footer {
-  height: 1rem;
-  background: red;
 }
