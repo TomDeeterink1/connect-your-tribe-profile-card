@@ -25,11 +25,26 @@ app.get('/', function (request, response) {
   response.render('index', data)
 })
 
-// Maak een POST route voor de index
+// Maak een POST route voor de indexs
 app.post('/', function (request, response) {
   // Er is nog geen afhandeling van POST, redirect naar GET op /
   response.redirect(303, '/')
 })
+
+// Maak een GET route voor new.ejs
+app.get('/new', function (request, response) {
+  // Render new.ejs uit de views map
+  response.render('new', data)
+})
+
+// Maak een GET route voor old.ejs
+app.get('/old', function (request, response) {
+  // Render old.ejs uit de views map
+  response.render('old', data)
+})
+
+
+
 
 // Stel het poortnummer in waar express op moet gaan luisteren
 app.set('port', process.env.PORT || 8000)

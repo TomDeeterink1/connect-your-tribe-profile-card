@@ -1,0 +1,87 @@
+<%- include('./partials/head') %>
+<div class="extra-wrapper">
+    <div class="full-wrapper">
+        <div class="card-wrapper">
+          <div class="frond-card">
+            <button onclick="showBackcard();" class="flip">▶︎</button>
+            <div class="frond-top">
+              <h1> <span class="hover-name">Tom</span>  <br> Deeterink</h1>
+              
+            </div>
+            <div class="frond-bottom">
+              <!-- <img src="./assets/_DSC3532.jpeg"> -->
+            </div>
+          </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="back-card">
+            <div class="back-top">
+              <h2>About me</h2>
+            </div>
+            <div class="back-bottom">
+              <div class="colum">
+                <div class="row1">
+                  <ul>
+                    <li>Gamen</li>
+                    <li>Films</li>
+                    <li>Sporten</li>
+                    <li>Fitness</li>
+                    <li>Fietsen</li>
+                    <li>Series</li>
+                  </ul>
+                </div>
+                <div class="row2">
+                  <ul>
+                    <li>21 jaar</li>
+                    <li>Uitgeest</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="2" class="colum3">
+                <div class="row3">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Officia quidem ad ea saepe est doloribus consequuntur placeat libero, ex et voluptas assumenda non officiis aliquam, 
+                  qui distinctio tenetur maxime itaque.</p>
+                </div>
+              </div>
+              <div id="2" class="colum2">
+                <div class="row1">
+                  <button onclick="window.location.href='https://instagram.com/tomdeeterink_?igshid=MzRlODBiNWFlZA==';" class="social-icon">📸</button>
+                  <button onclick="window.location.href='mailto:deeterinktom@gmail.com';"class="social-icon">📧</button>
+                  <button onclick="window.location.href='https://www.linkedin.com/in/tomdeeterink/';" class="social-icon">💼</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+</div>
+
+    <script>
+       const flipButtons = document.getElementsByClassName('flip');
+
+        // Get all elements with class "back-card"
+        const hiddenContents = document.getElementsByClassName('back-card');
+
+        // Add click event listeners to each "flip" button
+        for (let i = 0; i < flipButtons.length; i++) {
+          flipButtons[i].addEventListener('click', showBackCard);
+        }
+
+        // Event handler function to show the corresponding "back-card"
+        function showBackCard(event) {
+          // Find the index of the clicked button in the "flipButtons" collection
+          const index = Array.from(flipButtons).indexOf(event.target);
+
+          // Toggle the display property of the corresponding "back-card"
+          if (hiddenContents[index].style.display === 'block') {
+            hiddenContents[index].style.display = 'none';
+          } else {
+            hiddenContents[index].style.display = 'block';
+            hiddenContents[index].style.transition= '3s ease-in 3s';
+          }
+        }
+    </script>
+
+<%- include('./partials/foot') %>
