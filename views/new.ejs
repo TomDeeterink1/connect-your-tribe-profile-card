@@ -12,8 +12,8 @@
         <option class="option" value="Triple">Triple page</option>
         <option class="option" value="B-Rain">B-Rain</option>
     </select>
-    <a id="triple" class="link" href=" <%= data.website %> "> Triple webpage</a>
     <a id="portfolio" class="link" href=" <%= data.website %> "> Portfolio</a>
+    <a id="triple" class="link" href=" <%= data.website %> "> Triple webpage</a>
     <a id="berain" class="link" href=" <%= data.website %> "> B-rain Webpage</a>
 </section>
 
@@ -27,24 +27,25 @@
     const button3 = document.getElementById('berain');
     
     if (selectedValue === 'default') {
-        button.style.display = 'none';
-        button2.style.display = 'none';
-        button3.style.display = 'none';
+        button.style.marginLeft = '-300px';
+        button2.style.marginLeft = '-300px';
+        button3.style.marginLeft = '-300px';
         
     } else {
         if (selectedValue === 'Triple') {
-        button2.style.display = 'none';
-        button3.style.display = 'none';
-        button.style.display = 'inline-block';
+        button2.style.marginLeft = '-300px';
+        button3.style.marginLeft = '-300px';
+        button.style.marginLeft = '0px';
     } else {
         if (selectedValue === 'Portfolio') {
-            button.style.display = 'none';
-            button2.style.display = 'inline-block';
+            button.style.marginLeft = '-300px';
+            button2.style.marginLeft = '0px';
+            button3.style.marginLeft = '-300px';
         } else {
-            if (selectedValue === 'berain') {
-            button.style.display = 'none';
-            button2.style.display = 'none';
-            button3.style.display = 'inline-block';
+            if (selectedValue === 'B-Rain') {
+            button.style.marginLeft = '-300px';
+            button2.style.marginLeft = '-300px';
+            button3.style.marginLeft = '0px';
         }
         }
     }

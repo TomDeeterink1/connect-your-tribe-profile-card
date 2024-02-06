@@ -70,10 +70,13 @@ body{
   width: 100%;
 }
 .menu{
+  margin-top: 150px !important;
+  border-radius: var(--medium);
+  box-shadow: 1px 1px 11px -3px rgb(7,7,13);
   top: 50%;
   margin: 0 auto;
   width: 400px;
-  background-color: var(--primary-low);
+  background: linear-gradient(138deg, rgba(7,7,43,1) 88%, rgba(255,255,255,1) 88%);
   padding: var(--large);
   display: flex;
   flex-direction: column;

@@ -1,14 +1,23 @@
+body{
+  background-image: linear-gradient(to right top, #04041a, #232048, #4e3477, #8645a3, #c750c9);
+}
+
 .card{
+  margin-top: 150px !important;
+  scroll-behavior: smooth;
+  overflow: hidden;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 300px;
     height: fit-content;
-    background-color: var(--primary-low);
-    border-radius: var(--radius-medium);
+    background: rgb(7,7,43);
+    background: linear-gradient(138deg, rgba(7,7,43,1) 88%, rgba(255,255,255,1) 88%);
     padding: var(--large);
     gap: var(--extra-small);
+    border-radius: var(--medium);
+    box-shadow: 1px 1px 11px -3px rgb(7,7,13);
     & h1{
       color: var(--secondary);
       margin-top: var(--extra-small);
@@ -24,7 +33,7 @@
     & p{
       color: var(--main);
     }
-
+  
   & select{
     margin-top: var(--large);
     padding: 0.5em 2em;
@@ -42,8 +51,21 @@
       border: var(--none);
     }
   }
-  & #triple , #portfolio , #berain{
-      display: none;
-      margin-top: var(--medium);
+  & #triple , #portfolio , #berain {
+      overflow: hidden;
+      margin-left: -300px;
+      transition: ease-in-out 0.35s;
+      
   }
+
+  & #portfolio{
+    margin-top: var(--medium);
+  }
+  & #triple{
+    margin-top: -36px;
+  }
+  & #berain{
+    margin-top: -38px;
+  }
+
   }
