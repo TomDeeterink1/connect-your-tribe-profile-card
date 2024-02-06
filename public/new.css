@@ -24,4 +24,26 @@
     & p{
       color: var(--main);
     }
+
+  & select{
+    margin-top: var(--large);
+    padding: 0.5em 2em;
+    font-size: 1em;
+    border: var(--none);
+    border-radius: var(--button);
+    background-color: var(--secondary);
+    color: var(--main);
+    &:hover{
+      cursor: pointer;
+    }
+    & option {
+      background-color: var(--main);
+      color: var(--primary-low);
+      border: var(--none);
+    }
+  }
+  & #triple , #portfolio , #berain{
+      display: none;
+      margin-top: var(--medium);
+  }
   }

@@ -5,7 +5,52 @@
     <h2> <%= data.surname %> </h2>
     <p> <%= data.bio %> </p>
     <a class="link" href=" <%= data.website %> "> Mijn Website</a>
-    <a class="link primary" href=" <%= data.github_handle%> "> Mijn Github</a>
+    <a class="link secondary" href=" <%= data.github_handle%> "> Mijn Github</a>
+    <select class="repo-select"  onchange="toggleButtonVisibility()">
+        <option class="option" value="default">Select a reposatory</option>
+        <option class="option" value="Portfolio">Portfolio</option>
+        <option class="option" value="Triple">Triple page</option>
+        <option class="option" value="B-Rain">B-Rain</option>
+    </select>
+    <a id="triple" class="link" href=" <%= data.website %> "> Triple webpage</a>
+    <a id="portfolio" class="link" href=" <%= data.website %> "> Portfolio</a>
+    <a id="berain" class="link" href=" <%= data.website %> "> B-rain Webpage</a>
 </section>
+
+<script>
+
+    function toggleButtonVisibility() {
+    let selectElement = document.querySelector('.repo-select');
+    let selectedValue = selectElement.value;
+    const button = document.getElementById('triple');
+    const button2 = document.getElementById('portfolio');
+    const button3 = document.getElementById('berain');
+    
+    if (selectedValue === 'default') {
+        button.style.display = 'none';
+        button2.style.display = 'none';
+        button3.style.display = 'none';
+        
+    } else {
+        if (selectedValue === 'Triple') {
+        button2.style.display = 'none';
+        button3.style.display = 'none';
+        button.style.display = 'inline-block';
+    } else {
+        if (selectedValue === 'Portfolio') {
+            button.style.display = 'none';
+            button2.style.display = 'inline-block';
+        } else {
+            if (selectedValue === 'berain') {
+            button.style.display = 'none';
+            button2.style.display = 'none';
+            button3.style.display = 'inline-block';
+        }
+        }
+    }
+    }
+    
+}
+    </script>
 
 <%- include('./partials/foot') %>
