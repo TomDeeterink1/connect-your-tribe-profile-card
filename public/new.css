@@ -8,6 +8,7 @@ body{
   overflow: hidden;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
     width: 300px;
@@ -18,6 +19,12 @@ body{
     gap: var(--extra-small);
     border-radius: var(--medium);
     box-shadow: 1px 1px 11px -3px rgb(7,7,13);
+    transform: scale(100%);
+    transition: ease-out 0.5s;
+    &:hover{
+      transform: scale(110%);
+      transition: ease-in 0.3s;
+    }
     & h1{
       color: var(--secondary);
       margin-top: var(--extra-small);
@@ -33,9 +40,12 @@ body{
     & p{
       color: var(--main);
     }
+    & a{
+      margin-top: var(--medium);
+    }
   
   & select{
-    margin-top: var(--large);
+    margin-top: var(--medium);
     padding: 0.5em 2em;
     font-size: 1em;
     border: var(--none);

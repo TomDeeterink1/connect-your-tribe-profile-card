@@ -6,22 +6,27 @@
     <p> <%= data.bio %> </p>
     <a class="link" href=" <%= data.website %> "> Mijn Website</a>
     <a class="link secondary" href=" <%= data.github_handle%> "> Mijn Github</a>
+    <!-- Choose a repo with the select element-->
     <select class="repo-select"  onchange="toggleButtonVisibility()">
         <option class="option" value="default">Select a reposatory</option>
         <option class="option" value="Portfolio">Portfolio</option>
         <option class="option" value="Triple">Triple page</option>
         <option class="option" value="B-Rain">B-Rain</option>
     </select>
-    <a id="portfolio" class="link" href=" <%= data.website %> "> Portfolio</a>
-    <a id="triple" class="link" href=" <%= data.website %> "> Triple webpage</a>
-    <a id="berain" class="link" href=" <%= data.website %> "> B-rain Webpage</a>
+    <!-- These buttons are used for the javascript function, they are not visible in the website at frist sight -->
+    <a id="portfolio" class="link" href=" https://github.com/TomDeeterink1/portfolio-site "> Portfolio</a>
+    <a id="triple" class="link" href=" https://github.com/TomDeeterink1/the-startup-responsive-interactieve-website "> Triple webpage</a>
+    <a id="berain" class="link" href=" https://github.com/TomDeeterink1/fix-the-flow-interactive-website "> B-rain Webpage</a>
 </section>
 
 <script>
 
+    // Function to make buttons move in the right way
     function toggleButtonVisibility() {
+    // Define the elements that are used in the html
     let selectElement = document.querySelector('.repo-select');
     let selectedValue = selectElement.value;
+    // Connect html buttons to const
     const button = document.getElementById('triple');
     const button2 = document.getElementById('portfolio');
     const button3 = document.getElementById('berain');
